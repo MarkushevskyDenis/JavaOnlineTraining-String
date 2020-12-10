@@ -1,5 +1,7 @@
 package by.jonline.grow.string;
 
+import java.util.Arrays;
+
 /**
  * Замените в строке все вхождения 'word' на 'letter'
  */
@@ -21,9 +23,8 @@ public class StringAsArr2 {
             if (arr[j] == 'w') {
                 if (arr[j + 1] == 'o' && arr[j + 2] == 'r' && arr[j + 3] == 'd') {
 
-                    arr = increaseSize(arr, 2);
-                    move(arr, j, 2);                                                //первый аргумент - массив, который необходимо сдвинуть; второй аргумент - крайний левый элемент; третий аргумент - сколько раз сдвигать
-
+                    arr = Arrays.copyOf(arr, arr.length + 2);
+                    move(arr, j, 2);
                     arr[j] = 'l';
                     arr[j + 1] = 'e';
                     arr[j + 2] = 't';
@@ -40,24 +41,14 @@ public class StringAsArr2 {
         return arr;
     }
 
-    static char[] increaseSize(char[] arr, int n) {
-
-        char[] clone = new char[arr.length + n];
-
-        for (int k = 0; k < arr.length; k++) {
-            clone[k] = arr[k];
-        }
-
-        return clone;
-
-    }
 
     static void move(char[] arr, int j, int n) {
 
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++) {
             for (int k = arr.length - 1; k > j; k--) {
                 arr[k] = arr[k - 1];
             }
+        }
 
     }
 

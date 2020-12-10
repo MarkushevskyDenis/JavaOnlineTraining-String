@@ -6,7 +6,7 @@ package by.jonline.grow.string;
 
 public class StringAsObj2 {
     public static void main(String[] args) {
-        String s = "denisadenisaaaadenisaaaadenis aa a aa  adenisa";
+        String s = "a b a c d a";
         StringBuilder str = new StringBuilder(s);
 
         for (int i = 0; i < str.length(); i++) {

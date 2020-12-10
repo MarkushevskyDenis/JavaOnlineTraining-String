@@ -9,7 +9,7 @@ public class StringAsObj1 {
 
         int max = 0;
         int count = 0;
-        String str = "sdfds    sdfdsfd    sdf ds      dsfdsf      d         ";
+        String str = "          sdfds    sdfdsfd    sdf ds      dsfdsf      d         ";
 
         for (int i = 0; i < str.length(); i++) {
 

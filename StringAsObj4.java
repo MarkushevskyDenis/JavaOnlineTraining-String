@@ -10,7 +10,9 @@ public class StringAsObj4 {
         String str = "информатика";
         String res;
 
-        res = str.substring(7, 8) + str.substring(3, 5) + str.substring(7, 8);
+        res = str.copyValueOf(str.toCharArray(), 7, 1)
+                + str.copyValueOf(str.toCharArray(), 3, 2)
+                + str.copyValueOf(str.toCharArray(), 7, 1);
 
         System.out.println(res);
     }

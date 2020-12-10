@@ -8,7 +8,7 @@ package by.jonline.grow.string;
 public class StringAsObj7 {
     public static void main(String[] args) {
 
-        StringBuilder str = new StringBuilder("ddddenisdddd");
+        StringBuilder str = new StringBuilder("dddde n   isdddd");
 
         for (int i = 0; i < str.length(); i++) {
             for (int j = i + 1; j < str.length(); j++) {

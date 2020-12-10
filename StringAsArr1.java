@@ -1,5 +1,7 @@
 package by.jonline.grow.string;
 
+import java.util.Arrays;
+
 /**
  * Дан массив названий переменных в camelCase. Преобразовать названия в snake_case.
  */
@@ -27,7 +29,7 @@ public class StringAsArr1 {
 
                 arr[j] += 32;
 
-                arr = increaseSize(arr, 1);
+                arr = Arrays.copyOf(arr,arr.length + 1);
 
                 for (int k = arr.length - 1; k > j; k--) {
                     arr[k] = arr[k - 1];
@@ -40,16 +42,5 @@ public class StringAsArr1 {
         return arr;
     }
 
-    static char[] increaseSize(char[] arr, int n) {
-
-        char[] clone = new char[arr.length + n];
-
-        for (int k = 0; k < arr.length; k++) {
-            clone[k] = arr[k];
-        }
-
-        return clone;
-
-    }
 
 }
